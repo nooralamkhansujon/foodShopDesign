@@ -1,0 +1,376 @@
+html{
+   box-sizing: border-box;
+   font-family: serif;
+}
+
+:root{
+  --clr-text   :#3d3d3d; 
+  --clr-primary:#067e0a;
+  --clr-primary-dark:#0e3310;
+  --clr-accent :#764981;
+  --clr-accent-dark :#330f3b;
+  --ff-title   :sans-serif;
+  --ff-serif   :serif;
+  --ff-logo    :sans-serif;
+}
+
+*,*::before,*::after{
+   box-sizing: inherit;
+}
+
+html{
+  box-sizing : border-box;
+  font-family: var(--ff-serif);
+  color      : var(--clr-text);
+  font-size  : 1.125rem;
+}
+body{
+   margin:0;
+   text-align:center;
+}
+img{
+   display:block;
+   max-width:100%;
+}
+section{
+   padding:3em 1em;
+}
+.mb-0{
+   margin-bottom:0;
+}
+/* Typography */
+h1,h2,h3,h4,p{
+   margin:0;
+}
+
+h2,h3{
+   font-family:var(--ff-title);
+   line-height:0.8;
+   letter-spacing:1px;
+}
+p{
+   margin-bottom:.85em;
+}
+
+p:last-child{
+   margin-bottom:0;
+}
+
+.section-title-small{
+   font-size:2rem;
+}
+.section-title-small small{
+   font-size:0.7em;
+   display:block;
+}
+
+.text-primary{
+   color:var(--clr-primary);
+}
+.section-title{
+   font-size:2.5em;
+   text-transform:capitalize;
+}
+.logo{
+   font-family:var(--ff-logo);
+   text-align:center;
+}
+.logo a{
+   text-decoration:none;
+   color:black;
+
+}
+/* navigation */
+header{
+   padding:1em 0 2em;
+}
+
+nav ul{
+   display   :flex;
+   list-style:none;
+   margin    :0;
+   padding   :0;
+   justify-content: space-around;
+}
+nav a{
+   display:inline-block;
+   padding:0.5em;
+   color:var(--clr-primary);
+   text-decoration:none;
+}
+nav a:hover,nav a:focus{
+   color:var(--clr-accent);
+   text-decoration:underline;
+}
+/* Home styles  */
+
+.hero{
+   background-color     :#555;
+   background-image     : url('../img/flat-lay-photograph.jpg');
+   background-blend-mode: multiply;
+   background-attachment: fixed;
+   background-size      : cover;
+   color                :white;
+   text-align           : center;
+   padding              : 15vh 1em;
+}
+
+
+
+.about-us{
+  background:var(--clr-accent);
+  display:flex;
+  flex-direction:column;
+  color:white;
+  padding:0;
+}
+
+
+.about-us__intro{
+   background-image:url('../img/food-dinner.jpg');
+   background-size:cover;
+   background-position:center;
+   padding:3em 1em 1.5em;
+}
+
+.about-us__body{
+   padding:1.5em 1em 3em; 
+}
+
+.order-online{
+  background:#e6dede;
+}
+
+
+
+/* buttons */
+.btn-group{
+   display:flex;
+   flex-wrap:wrap;
+   flex-direction:column;
+}
+.btn{
+  padding:.75em 2.5em;
+  color:white;
+  text-decoration:none;
+  display:block;
+  margin:0.5em 0;
+  border-radius:0.35em;
+}
+
+.btn-primary{
+   background:var(--clr-primary);
+}
+.btn-primary:hover,.btn-primary:focus{
+   background:var(--clr-primary-dark);
+}
+
+
+.btn-accent{
+   background:var(--clr-accent);
+}
+.btn-accent:hover,.btn-accent:focus{
+   background:var(--clr-accent-dark);
+}
+
+.products{
+   display:flex;
+   flex-direction:column;
+   max-width:30rem;
+   margin:0 auto;
+}
+
+.product{
+  border-radius : 1em;
+  overflow      : hidden;
+  box-shadow    : 0 0 1em rgba(0,0,0,0.1);
+  display       : flex;
+  flex-direction: column;
+}
+
+.product:last-of-type{
+   margin-bottom:2em;
+}
+.product__content{
+   padding:1.5em;
+}
+
+.product__title{
+  color:var(--clr-primary);
+  font-size:2.5rem;
+  margin-bottom:0.5em;
+}
+
+.fintprint{
+   font-size:0.75rem;
+   color:rgba(0,0,0,0.85);
+}
+
+footer{
+   background:var(--clr-accent-dark);
+   padding:3em 1em;  
+   color:white;
+   display:flex;
+   justify-content:center;
+   /* gap:5em; */
+   margin-top:3em;
+}
+
+
+footer a {
+   color:inherit;
+}
+.footer-nav,.footer-social{
+   list-style:none;
+   margin:0;
+   padding:0;
+   /* display:flex;
+   flex-wrap:wrap;
+   justify-content:center; */
+}
+
+.footer-nav a{
+    padding:0.75em;
+    text-decoration:none;
+}
+
+.footer-nav a:hover{
+   text-decoration:underline;  
+}
+.social-link{
+   display:inline-block;
+   margin-bottom:5px;
+}
+
+.social-icon{
+    width:50px;
+}
+
+@media only screen and (min-width:750px)
+{
+   section{
+      padding:6em 1em;
+   }
+   .btn-group{
+      flex-direction:row;
+   }
+   .about-us{
+      flex-direction:row;
+   }
+   .about-us__intro,
+   .about-us__body{
+      flex:0 1 50%;
+      display:flex;
+      padding:6em 2em;
+      flex-direction:column;
+   }
+
+   .about-us__intro{
+       text-align:right;
+   }
+
+   .about-us__intro > *{
+       max-width:27rem;
+       margin-left:auto;
+   }
+
+   .about-us__body{
+       text-align:left;
+   }
+   .about-us__body > *{
+      max-width:27rem;
+      margin-right:auto;
+   }
+   .order-online  > *{
+       max-width:55ch;
+       margin-left:auto;
+       margin-right:auto;
+   }
+   .order-online{
+      display:grid;
+   }
+
+   .btn-group{
+      margin-top:1em;
+      flex-direction:row;
+      justify-content: center;
+   }
+   .product_btn{
+     display:inline-block;
+     /* width:50px; */
+     text-align:center;
+   }
+
+   .btn + .btn{
+      margin-left:0.5em;
+   }
+   .products{
+      flex-direction:row;
+      max-width:1200px;
+      padding:0 5em;
+   }
+
+   .product{
+      margin:0;
+      flex:0 1 33%;
+   }
+   .product__title{
+      font-size:1.5em;
+   }
+   .product + .product{
+     margin-left:1em;
+   }
+
+   .section-title-small{
+      font-size:3em;
+   }
+   .section-title{
+      font-size:4em;
+   }
+   .hero{
+      font-size:4em;
+   }
+
+}
+
+@media only screen and (max-width:700px)
+{
+   footer{
+      flex-direction:column;
+   }
+   .footer-social{
+      margin-top:2em;
+   }
+   .social-icon{
+      width:30px;
+  }
+   .section-title{
+      font-size:2em;
+   }
+   .product-showcase h2{
+      font-size:2em;
+      padding:1em;
+   }
+   .section-title-small{
+      font-size:1em;
+   }
+   .intro .section-title{
+      font-size:1.5em;
+      letter-spacing:0.1em;
+      text-align:justify;
+   }
+   .product__title{
+      font-size:1.5em;
+   }
+   .product__content{
+       padding:2em;
+       text-align:center;
+   }
+   .product__content p{
+         /* padding:1em; */
+         /* word-wrap: break-word; */
+   }
+   .hero{
+      font-size:2em;
+   }
+}
